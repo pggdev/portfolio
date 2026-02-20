@@ -8,7 +8,7 @@ export const Works = () => {
     return <div className="flex justify-center items-center py-10">
         <Container>
 
-            <h1 className="flex items-center gap-2 text-white font-semibold text-2xl font-mono">
+            <h1 className="flex items-center gap-2 text-white font-semibold text-xl font-mono">
                 <IconChevronRight />
                 work
             </h1>

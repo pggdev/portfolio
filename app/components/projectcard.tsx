@@ -1,13 +1,14 @@
 "use client"
 
 import { motion } from "motion/react"
-import { IconExternalLink } from "@tabler/icons-react"
+import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react"
 
 
 interface Projects {
     projectName: string,
     live: boolean,
-    desc1: string
+    desc1: string,
+    timeline?: string
 }
 
 
@@ -18,7 +19,7 @@ export const ProjectCard = ({ ...props }: Projects) => {
                 <div className="flex items-baseline-last gap-4">
 
                     <h1 className="font-sans text-lg font-medium ">{props.projectName}</h1>
-                    <h1 className="font-sans text-xs text-gray-500 ">{props.live}</h1>
+                    <h1 className="font-sans text-xs text-gray-500 ">{props.timeline}</h1>
 
                 </div>
                 <h1 className="font-mono text-xs text-gray-500 pt-4">{props.desc1}</h1>
@@ -31,10 +32,9 @@ export const ProjectCard = ({ ...props }: Projects) => {
                 className="cursor-pointer"
             >
                 <motion.div
-
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                 >
-                    <IconExternalLink className="size-4 text-gray-500" />
+                    {props.live ? <IconExternalLink className="size-4 text-gray-500" /> : <IconBrandGithub className="size-4 text-gray-500" />}
                 </motion.div>
             </motion.button>
 
