@@ -13,7 +13,7 @@ interface WorkDetail {
 export const WorkCard = ({ ...props }: WorkDetail) => {
     const [expanded, setExpanded] = useState(false)
     return <div className="pl-3 border-l border-gray-600">
-        <div className="flex items-center gap-4  py-1 justify-between">
+        <div className="flex items-center gap-4  py-[0.5px] justify-between">
             <div className="pl-6">
                 <div className="flex items-baseline-last gap-4">
 
